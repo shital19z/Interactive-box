@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f3f4f6;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.box {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  cursor: pointer;
+  max-height: 60px;
+}
+
+.box.expanded {
+  max-height: 300px;
+}
+
+.header {
+  padding: 16px 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #fff;
+}
+
+.content {
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.box.expanded .content {
+  opacity: 1;
+}
+
+.option {
+  margin-bottom: 15px;
+}
+
+.option label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.colors {
+  display: flex;
+  gap: 10px;
+}
+
+.color {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 2px solid #ccc;
+}
+
+.color.red {
+  background-color: red;
+}
+
+.color.green {
+  background-color: green;
+}
+
+.color.blue {
+  background-color: blue;
+}
+
+.sizes button {
+  padding: 6px 14px;
+  margin-right: 10px;
+  border: 1px solid #999;
+  background: #eee;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.sizes button:hover {
+  background: #ddd;
+}
